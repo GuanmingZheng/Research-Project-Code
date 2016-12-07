@@ -63,6 +63,11 @@ hat.BS.st <- function(data, fit.JM, s, t) {
   return(BS.total/length(people.s))
 }
 
+
+
+
+############Draw plot  
+
 S=seq(0,10,0.5)
 S
 t1=3
@@ -113,18 +118,15 @@ q21=hat.BS.st(ND,fit.JM11,10,5)
 
 
 
-set1<-c(z1,z2,z3,z4,z5,z6,z7,z8,z9,z10,z11,z12,z13,z14,z15,z16,z17,z18,z19,z20,z21)
-set2<-c(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21)
-set1
-set2
+t3.set<-c(z1,z2,z3,z4,z5,z6,z7,z8,z9,z10,z11,z12,z13,z14,z15,z16,z17,z18,z19,z20,z21)
+t5.set<-c(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21)
+t3.set
+t5.set
 
-
-
-for(s in S){
-  
-  Zs=hat.BS.st(ND,fit.JM11,s,3)
-  return(Zs)
-}
-
-
+plot(y,t5.set,main="blue:t=3 and red:t=5",xlab="s value")
+lines(y,t3.set,type="o",lty=2,col="blue")
+lines(y,t5.set,pch=22,type="o",lty=3,col="red")
 ##s =seq(0,10,0.5) with t = 3 or 5
+
+
+
