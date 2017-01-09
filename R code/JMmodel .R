@@ -18,6 +18,7 @@ pred.surv <- function(patient.data, prediction.time, fit.JM) {
 }
 
 
+
 ################################################ Model 1 ####################################################
 
 ##linear mixed effects model sqrt(cd4)~obstime & obstime:drug
